@@ -1,55 +1,18 @@
 package model;
 
-import util.IMCUtils;
-
-public class IMCAdultos implements CalculoIMC {
+public class IMCAdultos extends CalculadoraGeneric{
 
 	@Override
-	public String calcularIMC(double altura, double peso) {
-		double imc = IMCUtils.getIMC(peso, altura);
-
-		if (imc < 18.5)
-			return calcularIMCBaixo(imc);
-
-		if (imc > 25)
-			return calcularIMCAlto(imc);
-
-		return "Peso normal";
-
+	public void buildLimitesIMC() {
+		limitesIMC.add(new LimiteIMC(16, "Baixo peso muito grave"));
+		limitesIMC.add(new LimiteIMC(17, "Baixo peso grave"));
+		limitesIMC.add(new LimiteIMC(18.5, "Baixo peso"));
+		limitesIMC.add(new LimiteIMC(25, "Peso normal"));
+		limitesIMC.add(new LimiteIMC(30, "Sobrepeso"));
+		limitesIMC.add(new LimiteIMC(35, "Obesidade grau I"));
+		limitesIMC.add(new LimiteIMC(40, "Obesidade grau II"));
+		limitesIMC.add(new LimiteIMC(Double.MAX_VALUE, "Obesidade grau III"));
 	}
 
-	private String calcularIMCBaixo(double imc) {
-		if (imc < 16)
-			return "Baixo peso muito grave";
-
-		if (imc >= 17)
-			return "Baixo peso";
-
-		return "Baixo peso grave";
-
-	}
-
-	private String calcularIMCAlto(double imc) {
-		if (imc < 35) {
-			return calcularIMCMedioAlto(imc);
-		} else {
-			return calcularIMCMuitoAlto(imc);
-		}
-	}
-
-	private String calcularIMCMedioAlto(double imc) {
-		if (imc < 30) {
-			return "Sobrepeso";
-		} else {
-			return "Obesidade grau I";
-		}
-	}
-
-	private String calcularIMCMuitoAlto(double imc) {
-		if (imc < 40) {
-			return "Obesidade grau II";
-		} else {
-			return "Obesidade grau III";
-		}
-	}
+	
 }
