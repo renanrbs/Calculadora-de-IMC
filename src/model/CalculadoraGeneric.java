@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CalculadoraGeneric implements CalculoIMC {
-	List<LimiteIMC> limitesIMC;
+	protected List<LimiteIMC> limitesIMC;
 
 	double imc;
 

@@ -1,4 +1,7 @@
-package model;
+package model.adulto;
+
+import model.CalculadoraGeneric;
+import model.LimiteIMC;
 
 public class IMCAdultos extends CalculadoraGeneric{
 

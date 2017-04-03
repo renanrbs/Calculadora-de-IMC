@@ -1,4 +1,7 @@
-package model;
+package model.infantil;
+
+import model.CalculoIMC;
+import model.CalculoIMCInfantil;
 
 public class IMCInfantilAdapter implements CalculoIMC{
 
