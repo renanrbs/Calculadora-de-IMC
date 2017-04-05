@@ -10,7 +10,7 @@ import model.infantil.IMCInfantilM;
 public class CalculadoraCreator {
 
 	public static CalculoIMC createCalculadoraIMC(String sexo, int idade) {
-		//verifica se é menor de idade
+		//verifica se eh menor de idade
 		if (idade < 20) {
 			//Se a idade for menor que 20, retorna o IMC infantil
 			return createIMCInfantil(sexo, idade);
@@ -18,7 +18,7 @@ public class CalculadoraCreator {
 			//Se a idade for acima de 65, retorna o IMC de idoso
 			return createIMCIdoso(sexo);
 		}
-		//Se a idade não se aplica em nenhuma das condições, retorna o IMC normal
+		//Se a idade nao se aplica em nenhuma das condicoes, retorna o IMC normal
 		return new IMCAdultos();
 	}
 

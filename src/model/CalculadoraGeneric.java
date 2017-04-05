@@ -11,11 +11,10 @@ public abstract class CalculadoraGeneric implements CalculoIMC {
 	public CalculadoraGeneric() {
 		//Ele cria um array 
 		this.limitesIMC = new ArrayList<>();
-		//Classe filha que chama o método, popula ele
+		//Classe filha que chama o metodo, popula ele
 		this.buildLimitesIMC();
 	}
 	
-	//
 	public abstract void buildLimitesIMC();
 
 	@Override
