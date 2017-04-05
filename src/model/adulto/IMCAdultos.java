@@ -4,7 +4,7 @@ import model.CalculadoraGeneric;
 import model.LimiteIMC;
 
 public class IMCAdultos extends CalculadoraGeneric{
-
+	
 	@Override
 	public void buildLimitesIMC() {
 		limitesIMC.add(new LimiteIMC(16, "Baixo peso muito grave"));
