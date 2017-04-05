@@ -11,7 +11,7 @@ public class IMCInfantilAdapter implements CalculoIMC{
 	public IMCInfantilAdapter(CalculoIMCInfantil calculoIMCInfantil, int idade) {
 		//salva um objeto da classe CalculoIMCInfantil
 		this.calculoIMCInfantil = calculoIMCInfantil;
-		//Salva a idade para ser usada no metodo de calcular
+		//Salva a idade para ser usada no metodo de calcularIMC
 		this.idade = idade;
 	}
 

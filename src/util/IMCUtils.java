@@ -4,9 +4,6 @@ package util;
 //classe de utilidades
 public class IMCUtils {
 
-	public static double getIMC(double peso, double altura) {
-		return peso / (altura * altura);
-	}
 	
 	//Faz a validacao dos dados inseridos
 	public static boolean ValidarDados(double altura, double peso, String sexo, int idade) {
