@@ -1,14 +1,17 @@
 package model.infantil;
 
-import model.CalculoIMCInfantil;
+import model.CalculadoraMenorIdade;
 
-public class IMCInfantilF implements CalculoIMCInfantil {
+public class IMCInfantilF extends CalculadoraMenorIdade {
+
+	public IMCInfantilF(int idade) {
+		super(idade);
+	}
 
 	@Override
-	public String calcularIMC(double altura, double peso, int idade) {
+	protected double[] decidirLimites(int idade) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 	
 }

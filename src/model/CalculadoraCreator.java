@@ -3,7 +3,6 @@ package model;
 import model.adulto.IMCAdultos;
 import model.idoso.IMCIdosoF;
 import model.idoso.IMCIdosoM;
-import model.infantil.IMCInfantilAdapter;
 import model.infantil.IMCInfantilF;
 import model.infantil.IMCInfantilM;
 
@@ -24,9 +23,9 @@ public class CalculadoraCreator {
 
 	private static CalculoIMC createIMCInfantil(String sexo, int idade) {
 		if (sexo.equals("masculino")) {
-			return new IMCInfantilAdapter(new IMCInfantilM(), idade);
+			return new IMCInfantilM(idade);
 		} else {
-			return new IMCInfantilAdapter(new IMCInfantilF(), idade);
+			return new IMCInfantilF(idade);
 		}
 	}
 	

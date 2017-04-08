@@ -1,19 +1,18 @@
 package model.idoso;
 
-import control.CalculadoraIMC;
-import model.CalculadoraGeneric;
+import model.CalculadoraMaiorIdade;
 import model.LimiteIMC;
 
-public class IMCIdosoM extends CalculadoraGeneric{
+public class IMCIdosoM extends CalculadoraMaiorIdade{
 
 	@Override
 	public void buildLimitesIMC() {
-		limitesIMC.add(new LimiteIMC(22, "Baixo peso"));
-		limitesIMC.add(new LimiteIMC(27, "Peso normal"));
-		limitesIMC.add(new LimiteIMC(30, "Sobrepeso"));
-		limitesIMC.add(new LimiteIMC(35.1, "Obesidade grau I"));
-		limitesIMC.add(new LimiteIMC(40, "Obesidade grau II"));
-		limitesIMC.add(new LimiteIMC(Double.MAX_VALUE, "Obesidade grau III"));
+		listaLimitesIMC.add(new LimiteIMC(22, "Baixo peso"));
+		listaLimitesIMC.add(new LimiteIMC(27, "Peso normal"));
+		listaLimitesIMC.add(new LimiteIMC(30, "Sobrepeso"));
+		listaLimitesIMC.add(new LimiteIMC(35.1, "Obesidade grau I"));
+		listaLimitesIMC.add(new LimiteIMC(40, "Obesidade grau II"));
+		listaLimitesIMC.add(new LimiteIMC(Double.MAX_VALUE, "Obesidade grau III"));
 	}
 
 }

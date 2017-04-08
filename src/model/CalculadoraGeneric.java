@@ -4,18 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CalculadoraGeneric implements CalculoIMC {
-	protected List<LimiteIMC> limitesIMC;
+	protected List<LimiteIMC> listaLimitesIMC;
 
 	double imc;
 
 	public CalculadoraGeneric() {
 		//Ele cria um array 
-		this.limitesIMC = new ArrayList<>();
-		//Classe filha que chama o metodo, popula ele
-		this.buildLimitesIMC();
+		this.listaLimitesIMC = new ArrayList<>();
 	}
-	
-	public abstract void buildLimitesIMC();
 
 	@Override
 	public String calcularIMC(double altura, double peso) {
@@ -24,7 +20,7 @@ public abstract class CalculadoraGeneric implements CalculoIMC {
 	}
 
 	public String AnalisarIMC(double imc) {
-		for (LimiteIMC limite : limitesIMC) {
+		for (LimiteIMC limite : listaLimitesIMC) {
 			if (imc < limite.getValor()) {
 				
 				return  limite.getMensagem();

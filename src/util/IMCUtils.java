@@ -1,5 +1,9 @@
 package util;
 
+import java.util.List;
+
+import model.LimiteIMC;
+
 //pattern desconhecido
 //classe de utilidades
 public class IMCUtils {
