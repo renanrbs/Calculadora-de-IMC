@@ -12,25 +12,25 @@ public class IMCInfantilF extends CalculadoraMenorIdade {
 	protected double[] decidirLimites(int idade) {
 		switch (idade) {
 		case 2:
-			return new double[] {15, 18, 19.5 };
+			return new double[] {15, 18, 19.8};
 		case 4:
-			return new double[] {14, 17, 18.5 };
+			return new double[] {14.1, 17, 18};
 		case 6:
-			return new double[] {13.8, 17, 20 };
+			return new double[] {13.9, 17, 18.9 };
 		case 8:
-			return new double[] {14, 18.4, 22 };
+			return new double[] {14, 18.2, 19.6 };
 		case 10:
-			return new double[] {14.5, 20, 24.5 };
+			return new double[] {14.5, 20, 23.1 };
 		case 12:
-			return new double[] {15.5, 21.6, 27 };
+			return new double[] {15.2, 21.3, 25.2 };
 		case 14:
-			return new double[] {16.5, 23.1, 29 };
+			return new double[] {16.1, 23.2, 27.1 };
 		case 16:
-			return new double[] {17.5, 24.5, 31 };
+			return new double[] {17.5, 24.4, 30.2 };
 		case 18:
-			return new double[] {18.2, 25.8, 29.5 };
+			return new double[] {18.1, 25.3, 30.1 };
 		case 19:
-			return new double[] { 18.5, 26, 34 };
+			return new double[] { 18.5, 26.2, 31.3 };
 		default:
 			return null;
 		}
