@@ -1146,6 +1146,7 @@ public class CalcImcTests {
 		Assert.assertEquals("Obesidade",
 				cal.calcularIMC(1.58, 78.18, "feminino", 19));
 
+	
 	}
 
 	// TESTE MENOR DE IDADE MASCULINO
