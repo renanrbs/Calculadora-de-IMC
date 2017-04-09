@@ -1,7 +1,5 @@
 package model.infantil;
 
-import model.CalculadoraMenorIdade;
-
 public class IMCInfantilF extends CalculadoraMenorIdade {
 
 	public IMCInfantilF(int idade) {
@@ -9,7 +7,7 @@ public class IMCInfantilF extends CalculadoraMenorIdade {
 	}
 
 	@Override
-	protected double[] decidirLimites(int idade) {
+	public double[] gerarLimites(int idade) {
 		switch (idade) {
 		case 2:
 			return new double[] {15, 18, 19.8};

@@ -1,7 +1,5 @@
 package model.infantil;
 
-import model.CalculadoraMenorIdade;
-
 public class IMCInfantilM extends CalculadoraMenorIdade {
 
 	public IMCInfantilM(int idade) {
@@ -9,7 +7,7 @@ public class IMCInfantilM extends CalculadoraMenorIdade {
 	}
 
 	// insere 3 valores que se referem a baixo peso, peso normal e sobrepeso
-	protected double[] decidirLimites(int idade) {
+	public double[] gerarLimites(int idade) {
 		switch (idade) {
 		case 2:
 			return new double[] {15, 18, 19.2 };

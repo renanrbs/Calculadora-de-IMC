@@ -1,6 +1,5 @@
 package control;
 
-import model.CalculadoraCreator;
 import model.CalculoIMC;
 import util.IMCUtils;
 

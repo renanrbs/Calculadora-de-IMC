@@ -1,8 +1,9 @@
-package model;
+package control;
 
+import model.CalculoIMC;
 import model.adulto.IMCAdultos;
-import model.idoso.IMCIdosoF;
-import model.idoso.IMCIdosoM;
+import model.adulto.IMCIdosoF;
+import model.adulto.IMCIdosoM;
 import model.infantil.IMCInfantilF;
 import model.infantil.IMCInfantilM;
 

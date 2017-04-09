@@ -9,7 +9,7 @@ public abstract class CalculadoraGeneric implements CalculoIMC {
 	double imc;
 
 	public CalculadoraGeneric() {
-		//Ele cria um array 
+		// Ele cria um array
 		this.listaLimitesIMC = new ArrayList<>();
 	}
 
@@ -22,10 +22,16 @@ public abstract class CalculadoraGeneric implements CalculoIMC {
 	public String AnalisarIMC(double imc) {
 		for (LimiteIMC limite : listaLimitesIMC) {
 			if (imc < limite.getValor()) {
-				
-				return  limite.getMensagem();
+
+				return limite.getMensagem();
 			}
 		}
 		return null;
+	}
+
+	public void registrarLimites(double[] valores, String[] mensagens) {
+		for (int i = 0; i < valores.length; i++) {
+			listaLimitesIMC.add(new LimiteIMC(valores[i], mensagens[i]));
+		}
 	}
 }
