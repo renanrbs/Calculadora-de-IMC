@@ -2,20 +2,20 @@ package util;
 
 import java.util.Arrays;
 
+import error.ValorInvalidoException;
+
 //classe de utilidades
 public class IMCUtils {
 
 	// Faz a validacao dos dados inseridos
-	public static boolean ValidarDados(double altura, double peso, String sexo, int idade) {
+	public static void validarDados(double altura, double peso, String sexo, int idade) throws ValorInvalidoException{
 		if (altura <= 0 || peso <= 0 || idade < 0) {
-			return false;
+			throw new ValorInvalidoException();
 		}
 
 		if (!(sexo.equals("masculino") || sexo.equals("feminino"))) {
-			return false;
+			throw new ValorInvalidoException();
 		}
-
-		return true;
 	}
 
 	public static double[] inserirValorMaximo(double[] array) {
