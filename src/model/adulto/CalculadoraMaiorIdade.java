@@ -3,20 +3,20 @@ package model.adulto;
 import model.CalculadoraGeneric;
 import util.IMCUtils;
 
-public abstract class CalculadoraMaiorIdade extends CalculadoraGeneric implements BuilderIMC {
+public abstract class CalculadoraMaiorIdade extends CalculadoraGeneric implements GeradorIMC {
 
 	public CalculadoraMaiorIdade() {
-		buildLimitesIMC();
+		criarLimitesIMC();
 	}
 
 	@Override
-	public void buildLimitesIMC() {
+	public void criarLimitesIMC() {
 		double[] valores = gerarLimites();
-		registrarLimites(IMCUtils.inserirValorMaximo(valores), buildMensagens());
+		registrarLimites(IMCUtils.inserirValorMaximo(valores), gerarMensagens());
 	}
 
 	@Override
-	public String[] buildMensagens() {
+	public String[] gerarMensagens() {
 		return new String[] { "Baixo peso", "Peso normal", "Sobrepeso", "Obesidade grau I",
 				"Obesidade grau II", "Obesidade grau III" };
 	}

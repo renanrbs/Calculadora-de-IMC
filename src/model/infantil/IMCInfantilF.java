@@ -6,6 +6,7 @@ public class IMCInfantilF extends CalculadoraMenorIdade {
 		super(idade);
 	}
 
+	// insere 3 valores que se referem a baixo peso, peso normal e sobrepeso
 	@Override
 	public double[] gerarLimites(int idade) {
 		switch (idade) {

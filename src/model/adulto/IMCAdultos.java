@@ -8,7 +8,7 @@ public class IMCAdultos extends CalculadoraMaiorIdade {
 	}
 
 	@Override
-	public String[] buildMensagens() {
+	public String[] gerarMensagens() {
 		return new String[] { "Baixo peso muito grave", "Baixo peso grave", "Baixo peso", "Peso normal", "Sobrepeso",
 				"Obesidade grau I", "Obesidade grau II", "Obesidade grau III" };
 	}
