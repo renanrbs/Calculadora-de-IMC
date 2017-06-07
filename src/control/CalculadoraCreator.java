@@ -37,4 +37,8 @@ public class CalculadoraCreator {
 			return new IMCIdosoF();
 		}
 	}
+	
+	public static void main(String[] args) {
+		System.out.println("oi");
+	}
 }
